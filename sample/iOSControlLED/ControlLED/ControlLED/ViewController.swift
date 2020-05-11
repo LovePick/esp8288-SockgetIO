@@ -48,7 +48,9 @@ class ViewController: UIViewController {
     
     
     func connectToServer(){
-        guard let url = URL(string: "http://localhost:5000") else { return }
+        
+        let strURL:String = "http://192.168.2.66:5000" //"http://localhost:5000"
+        guard let url = URL(string: strURL) else { return }
         
     
         self.manager = SocketManager(socketURL: url, config: [.log(true), .compress])
